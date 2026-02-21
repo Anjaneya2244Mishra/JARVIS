@@ -6,7 +6,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-OPENROUTER_API_KEY = os.environ.get(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)
+OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY")
 
 @app.route("/chat", methods=["POST"])
 def chat():
@@ -33,4 +33,5 @@ def chat():
     return jsonify({"reply": reply})
 
 if __name__ == "__main__":
+
     app.run(host="0.0.0.0", port=10000)
